@@ -63,3 +63,22 @@ void main() {
 (String, int) getUserInfo() {
   return ('Bob', 25);
 }
+/*Explanation:
+Creating a Record:
+
+A record named person is created with a positional field ('John') and two named fields (age and isStudent).
+Accessing Fields:
+
+The positional field is accessed with $1, and the named fields are accessed using their names directly.
+Record Type Annotation:
+
+An employee record is created using a record type annotation. This helps to define what fields and types the record should have.
+Destructuring:
+
+The employee record is destructured to extract the name and age directly.
+Function Returning a Record:
+
+A function called getUserInfo returns a record containing a name and age.
+Destructuring the Returned Record:
+
+The returned record from the function is destructured to retrieve the individual values.*/
