@@ -1,12 +1,3 @@
-/*What is a Function in Dart?
-A function is a block of code that you write once and can reuse multiple times. It takes inputs (optional), does some work, and gives you a result (optional).
-
-In Dart:
-
-Functions are objects, meaning you can assign them to variables or pass them as arguments to other functions.
-Every function has a type called Function.
-*/
-// Function that checks if a number is even
 bool isEven(int number) {
   return number % 2 == 0;
 }
@@ -14,34 +5,25 @@ bool isEven(int number) {
 // Using the function
 void main() {
   print(isEven(4)); // true
+  userInfo('Samay', 'Una', 928765436278);
+  userInfo2(name: 'Vivek', phoneNumber: 2873654567890, address: 'Una');
+  userInfo3('Aditya', 'UK', 12345678);
 }
 
-/* Types of Parameters
-Positional ParametersThese are the regular parameters.
-Example:
-void greet(String name) {
-  print('Hello, $name!');
+// Regular Positional Parameters
+void userInfo(String name, String address, int phoneNumber) {
+  // print(
+  //     'Hi $name welcome to our app, we get it your address: $address from your brother and phone no.: $phoneNumber is also get from your friend Rahul');
 }
-greet('Alice'); // Hello, Alice!
-Named Parameters
 
-You can name arguments when calling a function.
-Example:
-void showDetails({String? name, int? age}) {
-  print('Name: $name, Age: $age');
+// Named Parameters
+void userInfo2({String? name, String? address, int? phoneNumber}) {
+  print(
+      'Hi $name welcome to our app, we get it your address: $address from your brother and phone no.: $phoneNumber is also get from your friend Rahul');
 }
-showDetails(name: 'Bob', age: 25); // Name: Bob, Age: 25
-Required Named Parameters: Use required to make them mandatory.
-void showDetails({required String name, required int age}) {
-  print('Name: $name, Age: $age');
-}
-Optional Positional Parameters
 
-Parameters wrapped in [] are optional.
-Example:
-String describe(String name, [String? role]) {
-  return role != null ? '$name is a $role' : '$name';
+//Optional Positional Parameters
+void userInfo3(String name, [String? address, int? phoneNumber]) {
+  print(
+      'Hi $name welcome to our app, we get it your address: $address from your brother and phone no.: $phoneNumber is also get from your friend Rahul');
 }
-print(describe('Alice', 'developer')); // Alice is a developer
-print(describe('Alice')); // Alice
-*/
